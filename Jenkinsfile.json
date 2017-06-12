@@ -7,10 +7,10 @@
     "test": true
   },
   "container_repo": {
-    "host": "quay.io",
-    "master_acct": "lachie83",
-    "alt_acct": "lachie83",
-    "jenkins_creds_id": "quay_creds",
+    "host": "michelle.azurecr.io",
+    "master_acct": "michelle",
+    "alt_acct": "",
+    "jenkins_creds_id": "azure_creds",
     "repo": "croc-hunter",
     "dockeremail": ".",
     "dockerfile": "./"
