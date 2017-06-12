@@ -4,16 +4,16 @@
 
 Master:
   Memory: "512Mi"
-  HostName: k8sdemos.com
+  HostName: jenkins.k8sdemos.com
   ServiceType: ClusterIP
   InstallPlugins:
-      - kubernetes:0.11 
+      - kubernetes:0.11
       - workflow-aggregator:2.5
       - credentials-binding:1.11
       - git:3.3.0
+      - blueocean:1.0.1
       - pipeline-github-lib:1.0
       - ghprb:1.36.2
-      - blueocean:1.0.1
 
   ScriptApproval:
     - "method groovy.json.JsonSlurperClassic parseText java.lang.String"
@@ -27,9 +27,9 @@ Master:
       kubernetes.io/tls-acme: "true"
 
     TLS:
-      - secretName: jenkins.acs.az.estrado.io
+      - secretName: jenkins.k8sdemos.com
         hosts:
-          - jenkins.acs.az.estrado.io
+          - jenkins.k8sdemos.com
 
 Agent:
   Enabled: false
